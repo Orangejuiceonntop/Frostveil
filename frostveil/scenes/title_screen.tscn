@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d3212f2qaq4uj"]
+
+[ext_resource type="Texture2D" uid="uid://btof0makefuoj" path="res://assets/Background 3.PNG" id="1_fgkus"]
+
+[node name="title_screen" type="Node2D" unique_id=664538545]
+
+[node name="Background" type="TextureRect" parent="." unique_id=2124019936]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_fgkus")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1817518431]
+offset_left = 474.0
+offset_top = 169.0
+offset_right = 571.0
+offset_bottom = 200.0
+text = "Frostveil"
+
+[node name="buttons container" type="VBoxContainer" parent="." unique_id=1374549794]
+offset_left = 475.0
+offset_top = 300.0
+offset_right = 681.0
+offset_bottom = 401.0
+
+[node name="Button" type="Button" parent="buttons container" unique_id=1599610150]
+layout_mode = 2
+text = "Start"
+
+[node name="Button2" type="Button" parent="buttons container" unique_id=2145436394]
+layout_mode = 2
+text = "Settings"
+
+[node name="Button3" type="Button" parent="buttons container" unique_id=867494645]
+layout_mode = 2
+text = "Quit"
