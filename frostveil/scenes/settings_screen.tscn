@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://djuj8m04miigw"]
+
+[ext_resource type="Script" uid="uid://dq3cod3soeckv" path="res://scenes/settings_screen.gd" id="1_assm4"]
+[ext_resource type="Texture2D" uid="uid://btof0makefuoj" path="res://assets/Background 3.PNG" id="1_srqes"]
+
+[node name="settings_screen" type="Node2D" unique_id=314191796]
+script = ExtResource("1_assm4")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1413055897]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_srqes")
+
+[node name="settings-title" type="RichTextLabel" parent="." unique_id=1891783436]
+offset_left = 517.0
+offset_top = 130.0
+offset_right = 622.0
+offset_bottom = 164.0
+text = "Settings"
+
+[node name="music volume" type="RichTextLabel" parent="." unique_id=606095869]
+offset_left = 144.0
+offset_top = 199.0
+offset_right = 279.0
+offset_bottom = 228.0
+text = "Music volume"
+
+[node name="m slider" type="HSlider" parent="." unique_id=1951974305]
+offset_left = 300.0
+offset_top = 204.0
+offset_right = 379.0
+offset_bottom = 220.0
+max_value = 1.5
+step = 0.001
+value = 1.0
+
+[node name="sound volume" type="RichTextLabel" parent="." unique_id=124268769]
+offset_left = 142.0
+offset_top = 292.0
+offset_right = 277.0
+offset_bottom = 321.0
+text = "Sound volume"
+
+[node name="s slider" type="HSlider" parent="." unique_id=1336109310]
+offset_left = 300.0
+offset_top = 296.0
+offset_right = 379.0
+offset_bottom = 312.0
+max_value = 1.5
+step = 0.001
+
+[node name="return" type="Button" parent="." unique_id=1885448969]
+offset_left = 58.0
+offset_top = 48.0
+offset_right = 248.0
+offset_bottom = 97.0
+text = "<- Return"
+
+[connection signal="value_changed" from="m slider" to="." method="_on_m_slider_value_changed"]
+[connection signal="value_changed" from="s slider" to="." method="_on_s_slider_value_changed"]
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]

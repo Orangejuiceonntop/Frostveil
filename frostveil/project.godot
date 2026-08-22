@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Frostveil"
+run/main_scene="uid://d3212f2qaq4uj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

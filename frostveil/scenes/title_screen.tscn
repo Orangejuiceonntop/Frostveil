@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d3212f2qaq4uj"]
 
 [ext_resource type="Texture2D" uid="uid://btof0makefuoj" path="res://assets/Background 3.PNG" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://bhyxi0oswe3y" path="res://scenes/title_screen.gd" id="1_sa3yf"]
 
 [node name="title_screen" type="Node2D" unique_id=664538545]
+script = ExtResource("1_sa3yf")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2124019936]
 offset_right = 40.0
@@ -22,14 +24,16 @@ offset_top = 300.0
 offset_right = 681.0
 offset_bottom = 401.0
 
-[node name="Button" type="Button" parent="buttons container" unique_id=1599610150]
+[node name="start" type="Button" parent="buttons container" unique_id=1599610150]
 layout_mode = 2
 text = "Start"
 
-[node name="Button2" type="Button" parent="buttons container" unique_id=2145436394]
+[node name="settings" type="Button" parent="buttons container" unique_id=2145436394]
 layout_mode = 2
 text = "Settings"
 
-[node name="Button3" type="Button" parent="buttons container" unique_id=867494645]
+[node name="quit" type="Button" parent="buttons container" unique_id=867494645]
 layout_mode = 2
 text = "Quit"
+
+[connection signal="pressed" from="buttons container/settings" to="." method="_on_settings_pressed"]
